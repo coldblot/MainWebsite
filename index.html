@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+	*
+		{
+			margin: 0px;
+			box-sizing: border-box;
+			padding: 0px;
+		}
+		#bg
+		{
+			width: 100%;
+			position: absolute;
+			z-index: -1;
+		}
+		#bg img
+		{
+		    width: 100%;
+			height: 450px;
+			opacity: 0.7;
+		}
+		#bg h1
+		{
+			position: relative;
+			top: 250px;
+			left: 500px;
+			color: azure;
+			letter-spacing: 5px;
+			z-index: 2;
+		}
+		#navbar
+		{
+			position: fixed;
+			background-size: cover;
+			background-color: #222222;
+			padding: 30px;
+			width: 100%;
+			height: auto;
+            margin-right: 200px;
+			z-index: 10;
+		}
+	
+		#navbar a
+		{
+			
+		    text-decoration: none;
+			color: white;
+			font-weight: 600;
+			letter-spacing: 2px;
+			margin-left: 50px;
+		   font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			text-shadow: 1px 1px 4px white;
+			
+		}
+		#navbar a:hover
+		{
+			color: white;
+			font-size: 17px;
+			line-height:12px;
+			cursor: pointer;
+		}
+		#row
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			margin-right: 200px;
+		}
+			.wrapper
+		{
+			position: relative;
+			top: 480px;
+			right: 80px;
+			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			z-index: 20;
+		}
+		.wrapper h3
+		{
+			margin-left: 150px;
+		}
+		.responsive
+		{
+			
+			padding: 0px;
+			float: left;
+		    width:350px;
+			height: 250px;
+			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			
+		}
+		.row4
+		{
+			margin-top: 0px;
+		}
+		.gallery
+		{
+			
+			width:100%;
+			height: 100%;
+			border-radius: 5px;
+			padding:10px;
+			margin-left: 150px;
+		}
+		.gallery img
+		{
+			width:100%;
+			height: 100%;
+	
+		}
+		.des
+		{
+			padding: 0px;
+            text-align: center;
+			margin-top: 0px;
+			margin-left: 0;
+			font-size: 18px;
+            font-weight: bold;
+		}
+				#navbarDown
+		{
+			position: absolute;
+			background-size: cover;
+			background-color: #222222;
+			padding: 30px;
+			width: 100%;
+			height: auto;
+            top:900px;
+			z-index: 10;
+		}
+				#navbarDown a
+		{
+			 text-decoration: none;
+			color: white;
+			font-weight: 600;
+			letter-spacing: 2px;
+		   font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			text-shadow: 1px 1px 4px white;
+		}
+		#navbarDown a #social
+		{
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			 text-decoration: none;
+			color: white;
+			font-weight: 600;
+			letter-spacing: 2px;
+		   font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			text-shadow: 1px 1px 4px white;
+		}
+		#rowdown
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin-right: 50px;
+		}
+		#content
+		{
+		color: white;
+		position: absolute;
+		right: 300px;	
+		top: 100px;
+		font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        left: 650px;
+		}
+		#bar
+		{
+			display: none;
+		}
+		#content h1
+		{
+			
+			margin-left: 20px;
+			color: #B78080;
+		    font-size: 80px;
+			font-weight: 100;
+		}
+		#content h3
+		{
+			
+			margin-left: 10px;
+			width: 710px;
+			color: black;
+		}
+		.logo
+		{
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			padding: 5px;
+		}
+		.logoside
+		{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			padding: 5px;
+		}
+		.video iframe
+		{
+			margin-top: 20px;
+			 width:700px;
+		     height:400px;
+		}
+		@media screen and (max-width:600px)
+		{
+			
+			#sideimage
+			{
+				display: none;
+			}
+			#content
+		    {
+		   color: white;
+		   position: absolute;
+		   left: 60px;
+		   top: 250px;
+		   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		    }
+			#navbar
+			{
+				position:static;
+				display: none;
+				flex-direction:column;
+				justify-content: center;
+			}
+			#navbar a
+			{
+				display: flex;
+				flex-direction: column;
+				margin-top: 10px;
+				margin-left: 150px;
+			}
+		
+			#toggle:checked + #navbar
+			{
+				display: flex;
+				flex-direction:column;
+			}
+			.video
+			{
+				margin-top: 0px;
+			}
+			.video iframe
+			{
+		        margin-left: 0px;
+				margin-top:10px;
+				width: 300px;
+				height: 150px;
+				align-content: center;
+			}
+			#content h3
+			{
+				width:300px;
+			}
+			#bar
+			{
+				display: flex;
+				color:  #7A83C4;
+				background: #464EA0;
+				padding: 20px;
+				 font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+				font-weight: 600;
+				text-align: right;
+			}
+		}
+	</style>
+</head>
+
+<body bgcolor="#ECE8E8">
+	
+	<div id="navbar">
+ 
+<div id="row">
+	<img src="images/myLogo2.png" width="155" height="62" alt="" class="logo"/>
+	  <a href="index.html">HOME</a>
+<a href="#">PORTFOLIO</a>		
+<a href="#">CONTACT</a>	
+<a href="AboutUs.Html">ABOUT</a>	
+</div></div>
+<div id="bg"><h1>Game Assets For Learning Use</h1><img src="images/carlo-bruzzese-6.png" width="1919" height="455" alt=""/></div>
+<div class="wrapper">
+		<h3>Game Assets</h3>
+	<div class="row4">
+	<div class="responsive">
+		<div class="gallery">
+		<img src="Assets/RENDER.png" width="640" height="421" alt=""/>
+<div class="des">Oil Cane made in 3ds Max</div>
+	  </div>
+	</div>
+		<div class="responsive">
+		<div class="gallery">
+		<img src="Assets/bridge.jpg" width="640" height="480" alt=""/>
+<div class="des">3D textured bridge made in 3ds Max</div>
+	  </div>
+	</div>
+		<div class="responsive">
+		<div class="gallery">
+		<img src="Assets/ZBrush Document.jpg" width="1101" height="710" alt=""/>
+<div class="des">Warrior Shield made in Zbrush</div>
+	  </div>
+		</div>
+		<div class="responsive">
+		<div class="gallery">
+		  <img src="Assets/gate.jpg" width="966" height="624" alt=""/>
+<div class="des">Scifi Gate made in Zbrush and textured in Mudbox </div>
+	  </div>
+		</div>
+			</div>
+	</div>
+	
+		<div id="navbarDown">
+ <img src="images/myLogo2.png" width="155" height="62" alt="" class="logo"/>
+	<img src="images/facebook-icon-vector-21082437.png" width="62" height="62" class="logoside">
+		
+    <div id="rowdown">
+	  <a href="index.html">CopyRighted By GgameStudio</a>
+</div></div>
+</body>
+</html>
