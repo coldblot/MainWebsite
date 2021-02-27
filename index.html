@@ -2,14 +2,19 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>GgameStudio</title>
-	<meta name="viewport" content="width=device-width" maximum-scale="1" initial-scale="1" user-scalable="no">
+<meta name="viewport" content="width=device-width" maximum-scale="1" initial-scale="1" user-scalable="no">
 	<style>
 	*
 		{
 			margin: 0px;
 			box-sizing: border-box;
 			padding: 0px;
+		}
+		.header
+		{
+			display: flex;
 		}
 		#image
 		{
@@ -72,7 +77,7 @@
 			.wrapper
 		{
 			position: absolute;
-			bottom: 30px;
+			top: 450px;
 			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			left: -80px;
 			width: 100%;
@@ -141,6 +146,10 @@
 			letter-spacing: 2px;
 		   font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 			text-shadow: 1px 1px 4px white;
+		}
+		#bgtext
+		{
+			position: absolute;
 		}
 		#navbarDown a #social
 		{
@@ -212,7 +221,12 @@
 		}
 		@media screen and (max-width:759px)   
 		{
-			
+				*
+		{
+			margin: 0px;
+			box-sizing: border-box;
+			padding: 0px;
+		}
 			#sideimage
 			{
 				display: none;
@@ -428,6 +442,7 @@
 		@media screen and (max-width:480px)
 		{
 			
+			
 			#sideimage
 			{
 				display: none;
@@ -446,19 +461,19 @@
 				display: flex;
 				flex-direction:column;
 				justify-content: center;
-				margin-left: 0px;
 				width: 100%;
+				height: auto;
 			}
 			#row
 			{
-				margin-left: 375px;
+				margin-left: 315px;
 			}
 			#navbar a
 			{
 				display: flex;
 				flex-direction: row;
 				margin-top: 10px;
-				margin-left: 20px;
+				margin-left: 15px;
 				font-size: 10px;
 			}
 		   #navbarDown
@@ -473,17 +488,17 @@
 		}
 			.responsive
 		   {
-			padding: 20px;
+			padding: 15px;
 			}
 			.row5
 			{
-				top: 1040px;
+				top: 1140px;
 			}
 		    .wrapper
 			{
 				top:300px;
 				bottom:0px;
-				left:-80px;
+				left:-140px;
 			}
 			.des
 			{
@@ -501,7 +516,7 @@
              #rowdown a
 			{
 				font-size: 10px;
-				margin-left: 20px;
+				margin-left: -20px;
 				
 			}
 			#bgtext img
@@ -513,7 +528,7 @@
 			#bgtext h1
 			{
 				font-size: 12px;
-				margin-left:-380px;
+				margin-left:-420px;
 				margin-top: -20px;
 			}
 			.logo
@@ -681,26 +696,26 @@
 <div class="des">Oil Cane made in 3ds Max</div>
 	  </div>
 	</div>
-		<div class="responsive">
+	  <div class="responsive">
 		<div class="gallery">
 		<img src="Assets/bridge.jpg" width="640" height="480" alt=""/>
 <div class="des">3D textured bridge made in 3ds Max</div>
 	  </div>
 	</div>
-		<div class="responsive">
+	  <div class="responsive">
 		<div class="gallery">
 		<img src="Assets/ZBrush Document.jpg" width="1101" height="710" alt=""/>
 <div class="des">Warrior Shield made in Zbrush</div>
 	  </div>
 		</div>
-		<div class="responsive">
+	  <div class="responsive">
 		<div class="gallery">
 		  <img src="Assets/gate.jpg" width="966" height="624" alt=""/>
 <div class="des">Scifi Gate made in Zbrush and textured in Mudbox </div>
 	  </div>
 		</div>
-			</div>
-		<div class="row5">
+	  </div>
+	  <div class="row5">
 	<div class="responsive">
 		<div class="gallery">
 		<img src="Assets/scene.jpg" width="640" height="421" alt=""/>
