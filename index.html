@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>GgameStudio</title>
+	<meta name="viewport" content="width=device-width" maximum-scale="1" initial-scale="1" user-scalable="no">
 	<style>
 	*
 		{
@@ -10,27 +11,25 @@
 			box-sizing: border-box;
 			padding: 0px;
 		}
-		#bg
+		#image
 		{
-			width: 100%;
-			position: absolute;
+			margin-top: 40px;
+			margin-left: 0px;
+            width: 100%;
+			opacity: 0.7; 
 			z-index: -1;
 		}
-		#bg img
+		
+		#bgtext h1
 		{
-		    width: 100%;
-			height: 450px;
-			opacity: 0.7;
-		}
-		#bg h1
-		{
-			position: relative;
-			top: 250px;
-			left: 500px;
+			position: absolute;
+			top: 200px;
+			left: 450px;
 			color: azure;
 			letter-spacing: 5px;
 			z-index: 2;
 		}
+		
 		#navbar
 		{
 			position: fixed;
@@ -38,6 +37,7 @@
 			background-color: #222222;
 			padding: 30px;
 			width: 100%;
+			top: 0px;
 			height: auto;
             margin-right: 200px;
 			z-index: 10;
@@ -71,15 +71,17 @@
 		}
 			.wrapper
 		{
-			position: relative;
-			top: 480px;
-			right: 80px;
+			position: absolute;
+			bottom: 30px;
 			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-			z-index: 20;
+			left: -80px;
+			width: 100%;
 		}
 		.wrapper h3
 		{
+			color: azure;
 			margin-left: 150px;
+			margin-top: 0px;
 		}
 		.responsive
 		{
@@ -91,9 +93,10 @@
 			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			
 		}
-		.row4
+		.row5
 		{
-			margin-top: 0px;
+			position: absolute;
+			bottom: -300px;
 		}
 		.gallery
 		{
@@ -118,17 +121,17 @@
 			margin-left: 0;
 			font-size: 18px;
             font-weight: bold;
+			color: azure;
 		}
 				#navbarDown
 		{
-			position: absolute;
+			position:absolute;
 			background-size: cover;
 			background-color: #222222;
 			padding: 30px;
 			width: 100%;
+			bottom:-400px;
 			height: auto;
-            top:900px;
-			z-index: 10;
 		}
 				#navbarDown a
 		{
@@ -157,7 +160,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-			margin-right: 50px;
+			margin-left: 50px;
 		}
 		#content
 		{
@@ -207,7 +210,7 @@
 			 width:700px;
 		     height:400px;
 		}
-		@media screen and (max-width:600px)
+		@media screen and (max-width:700px)
 		{
 			
 			#sideimage
@@ -224,35 +227,78 @@
 		    }
 			#navbar
 			{
-				position:static;
-				display: none;
+				position:absolute;
+				display: flex;
 				flex-direction:column;
 				justify-content: center;
+				margin-left: 0px;
+			}
+			#row
+			{
+				margin-left: 400px;
 			}
 			#navbar a
 			{
 				display: flex;
-				flex-direction: column;
+				flex-direction: row;
 				margin-top: 10px;
-				margin-left: 150px;
+				margin-left: 10px;
+				font-size: 12px;
 			}
-		
+		   #navbarDown
+		{
+			position:absolute;
+			background-size: cover;
+			background-color: #222222;
+			padding: 30px;
+			width: 100%;
+			bottom:-1800px;
+			height: auto;
+		}
+			.responsive
+		   {
+			padding: 10px;
+			}
+			.row5
+			{
+				top: 1040px;
+			}
+		    .wrapper
+			{
+				top:300px;
+				bottom:0px;
+			}
 			#toggle:checked + #navbar
 			{
 				display: flex;
 				flex-direction:column;
 			}
-			.video
+             #rowdown a
 			{
-				margin-top: 0px;
+				font-size: 12px;
+				
 			}
-			.video iframe
+			#bgtext img
 			{
-		        margin-left: 0px;
-				margin-top:10px;
-				width: 300px;
-				height: 150px;
-				align-content: center;
+				margin-top: 80px;
+				width: 100%;
+				height: 200px;
+			}
+			#bgtext h1
+			{
+				font-size: 12px;
+				margin-left:-380px;
+				margin-top: -20px;
+			}
+			.logo
+			{
+				margin-left: -30px;
+				transform: scale(0.7,0.7);
+			}
+			.logoside
+			{
+				margin-right: -10px;
+				transform: scale(0.7,0.7);
 			}
 			#content h3
 			{
@@ -272,9 +318,8 @@
 	</style>
 </head>
 
-<body bgcolor="#ECE8E8">
-	
-	<div id="navbar">
+<body bgcolor="#373737">
+		<div id="navbar">
  
 <div id="row">
 	<img src="images/myLogo2.png" width="155" height="62" alt="" class="logo"/>
@@ -283,8 +328,8 @@
 <a href="#">CONTACT</a>	
 <a href="AboutUs.Html">ABOUT</a>	
 </div></div>
-<div id="bg"><h1>Game Assets For Learning Use</h1><img src="images/carlo-bruzzese-6.png" width="1919" height="455" alt=""/></div>
-<div class="wrapper">
+	<div class="header">
+	<div class="wrapper">
 		<h3>Game Assets</h3>
 	<div class="row4">
 	<div class="responsive">
@@ -312,13 +357,41 @@
 	  </div>
 		</div>
 			</div>
+		<div class="row5">
+	<div class="responsive">
+		<div class="gallery">
+		<img src="Assets/scene.jpg" width="640" height="421" alt=""/>
+<div class="des">Parking Booth Model made in 3ds Max</div>
+	  </div>
 	</div>
+		<div class="responsive">
+		<div class="gallery">
+		<img src="Assets/revelverrenderfile.jpg" width="640" height="480" alt=""/>
+<div class="des">3D Model of Revolver made in 3DS Max</div>
+	  </div>
+	</div>
+		<div class="responsive">
+		<div class="gallery">
+		<img src="Assets/knife.jpg" width="1101" height="710" alt=""/>
+<div class="des">3D Model of Knife</div>
+	  </div>
+		</div>
+		<div class="responsive">
+		<div class="gallery">
+		  <img src= "Assets/BoxRender.png" width="966" height="624" alt=""/>
+<div class="des">3D Model of wooden Crate </div>
+	  </div>
+		</div>
+			</div>
+	</div>
+
+	
+<div id="bgtext"><h1>Game Assets For Learning Use</h1><img src="images/carlo-bruzzese-6.png" alt="" id="image"/></div>
+</div>
 	
 		<div id="navbarDown">
  <img src="images/myLogo2.png" width="155" height="62" alt="" class="logo"/>
-<img src="images/myLogo2.png" width="155" height="62" alt="" class="logo"/>
 	<a href="https://www.facebook.com/coldblot/"><img src="images/facebook-icon-vector-21082437.png" width="62" height="62" class="logoside"></a>
-		
     <div id="rowdown">
 	  <a href="index.html">CopyRighted By GgameStudio</a>
 </div></div>
